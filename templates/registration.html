@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+
+    <!-- Title Page-->
+    <title>Job Seeker</title>
+
+    <!-- Icons font CSS-->
+    <link href="../static/login/vendor1/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="../static/login/vendor1/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="../static/login/vendor1/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="../static/login/vendor1/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="../static/login/css1/main.css" rel="stylesheet" media="all">
+
+
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">USER DETAILS</h2>
+                </div>
+
+                <div class="card-body">
+                    <form method="POST" action="">
+
+                        {{ form.hidden_tag() }}
+
+
+                        <div class="form-row m-b-55">
+                            <div class="name">Full Name</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            {{ form.fname(class ="input--style-5" ) }}
+
+                                            {% if form.fname.errors %}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.fname.errors %}
+                                                <span style="color:red">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                            {% else %}
+                                            {{ form.fname.label(class ="label--desc" ) }}
+                                            {% endif %}
+
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            {{ form.lname(class ="input--style-5" ) }}
+
+
+                                            {% if form.lname.errors %}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.lname.errors %}
+                                                <span style="color:red">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                            {% else %}
+                                            {{ form.lname.label(class ="label--desc" ) }}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row m-b-55">
+                            <div class="name">Contact Details</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            {{ form.email(class ="input--style-5" ) }}
+                                            {% if form.email.errors %}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.email.errors %}
+                                                <span style="color:red">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                            {% else %}
+                                            {{ form.email.label(class ="label--desc" ) }}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            {{ form.phone_no(class ="input--style-5" ) }}
+
+
+                                            {% if form.phone_no.errors %}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.pone_no.errors %}
+                                                <span style="color:red">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                            {% else %}
+                                            {{ form.phone_no.label(class ="label--desc" ) }}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row m-b-55">
+                            <div class="name">HSC Details</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            {{ form.hsc_name(class ="input--style-5" ) }}
+                                            {% if form.hsc_name.errors %}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.hsc_name.errors %}
+                                                <span style="color:red">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                            {% else %}
+                                            {{ form.hsc_name.label(class ="label--desc" ) }}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            {{ form.hsc_percent(class ="input--style-5" ) }}
+
+                                            {% if form.hsc_percent.errors %}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.hsc_percent.errors %}
+                                                <span style="color:red">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                            {% else %}
+                                            {{ form.hsc_percent.label(class ="label--desc" ) }}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row m-b-55">
+                            <div class="name">College Details</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            {{ form.college_name(class ="input--style-5" ) }}
+                                            {% if form.college_name.errors %}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.college_name.errors %}
+                                                <span style="color:red">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                            {% else %}
+                                            {{ form.college_name.label(class ="label--desc" ) }}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            {{ form.college_cgpa(class ="input--style-5" ) }}
+
+                                            {% if form.college_cgpa.errors %}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.college_cgpa.errors %}
+                                                <span style="color:red">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                            {% else %}
+                                            {{ form.college_cgpa.label(class ="label--desc" ) }}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">YEAR</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        {{ form.year }}
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row m-b-55">
+                            <div class="name">Objective</div>
+                            <div class="value">
+                                <div class="input-group-desc" style="width: 300%;">
+                                    {{ form.objective(class ="input--style-5" ) }}
+                                    {% if form.objective.errors %}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.objective.errors %}
+                                        <span style="color:red">{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    {% else %}
+                                    {{ form.objective.label(class ="label--desc" ) }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row m-b-55">
+                            <div class="name">Project Details</div>
+                            <div class="value">
+                                <div class="input-group-desc">
+                                    {{ form.project_name(class ="input--style-5" ) }}
+                                    {% if form.project_name.errors %}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.project_name.errors %}
+                                        <span style="color:red">{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    {% else %}
+                                    {{ form.project_name.label(class ="label--desc" ) }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row m-b-55">
+                            <div class="name"></div>
+                            <div class="value">
+                                <div class="input-group-desc" style="width: 300%;">
+                                    {{ form.project_desc(class ="input--style-5" ) }}
+                                    {% if form.project_desc.errors %}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.project_desc.errors %}
+                                        <span style="color:red">{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    {% else %}
+                                    {{ form.project_desc.label(class ="label--desc" ) }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row m-b-55">
+                            <div class="name">Skills</div>
+                            <div class="value">
+                                <div class="input-group-desc" style="width: 300%;">
+                                    {{ form.skills(class ="input--style-5" ) }}
+                                    {% if form.skills.errors %}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.skills.errors %}
+                                        <span style="color:red">{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    {% else %}
+                                    {{ form.skills.label(class ="label--desc" ) }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="form-row">
+                            <div class="name">PASSWORD</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    {{ form.password(class ="input--style-5" ) }}
+
+                                    {% if form.password.errors %}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.password.errors %}
+                                        <span style="color:red">{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-row">
+                            <div class="name">CONFIRM PASSWORD</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    {{ form.cpwd(class ="input--style-5" ) }}
+
+                                    {% if form.cpwd.errors %}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.cpwd.errors %}
+                                        <span style="color:red">{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div>
+                            <center>
+                                {{ form.submit(class ="btn btn--radius-2 btn--red" ) }}
+                            </center>
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="../static/login/vendor1/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="../static/login/vendor1/select2/select2.min.js"></script>
+    <script src="../static/login/vendor1/datepicker/moment.min.js"></script>
+    <script src="../static/login/vendor1/datepicker/daterangepicker.js"></script>
+
+    <!--Script-->
+    <script src="../static/login/js/validate.js"></script>
+    <!-- Main JS-->
+    <script src="../static/login/js1/global.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var url = 'http://127.0.0.1:5001/GUI-is-still-open';
+            fetch(url, {
+                mode: 'no-cors'
+            });
+            setInterval(function () {
+                fetch(url, {
+                    mode: 'no-cors'
+                });
+            }, 5000)();
+
+        });
+    </script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
